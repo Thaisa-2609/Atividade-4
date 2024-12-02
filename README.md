@@ -158,3 +158,12 @@ def exibir menu()
 
 - Exibe uma mensagem caso o usuário escolha uma opção que não está no menu.
 
+---
+
+ # Resumo das Funcionalidades
+
+Opção	Ação
+1	Adiciona um novo contato ao dicionário.
+2	Lista todos os contatos cadastrados.
+3	Remove um contato com base no nome fornecido pelo usuário.
+4	Sai do programa encerrando o loop principal.
