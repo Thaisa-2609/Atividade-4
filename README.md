@@ -45,6 +45,8 @@ Criar um programa em Python que permita:
 - O dicionário contatos armazena os nomes como chaves e os telefones como valores.
 - Exemplo: {'João': '1234-5678', 'Maria': '9876-5432'}.
 
+---
+
 2. Loop Principal:
 
 ```bash
@@ -52,6 +54,8 @@ Criar um programa em Python que permita:
 ```
 
 - Mantém o programa em execução até que o usuário escolha sair.
+
+---
 
 3. Exibição do Menu:
 
@@ -65,6 +69,8 @@ def exibir menu()
 ```
 - Exibe as opções disponíveis para o usuário.
 
+---
+
 4. Entrada do Usuário
 
 ```bash
@@ -72,6 +78,8 @@ def exibir menu()
 ```
 
 - Solicita que o usuário escolha uma opção digitando um número.
+
+---
 
 5. Adicionar Contato
 
@@ -89,4 +97,64 @@ def exibir menu()
 ```bash
     {'João': '1234'}
 ```
+
+---
+
+6. Listar Contatos 
+
+```bash
+    elif opcao == "2":
+    if contatos:
+        print("\nContatos:")
+        for nome, telefone in contatos.items():
+            print(f"{nome}: {telefone}")
+    else:
+        print("Nenhum contato cadastrado.")
+```
+
+- Verifica se há contatos no dicionário:
+    - Se houver: Usa um **for** para iterar sobre o dicionário e exibir cada contato no formato **Nome: Telefone**.
+    - Se não houver: Informa que não há contatos cadastrados.
+
+---
+
+7. Remover Contato
+
+```bash
+    elif opcao == "3":
+    nome = input("Digite o nome do contato para remover: ")
+    if nome in contatos:
+        del contatos[nome]
+        print(f"Contato de {nome} removido.")
+    else:
+        print("Contato não encontrado.")
+```
+
+- Solicita o nome do contato a ser removido.
+- Verifica se o nome existe no dicionário:
+    - Se existir: Remove o contato com **del contatos[nome]**.
+    - Se não existir: Exibe uma mensagem de erro.
+
+---
+
+8. Sair do Programa
+
+```bash
+    elif opcao == "4":
+    print("Saindo do programa.")
+    break
+```
+
+- Encerra o loop com **break**, finalizando o programa.
+
+---
+
+9. Opição Inválida 
+
+```bash
+    else:
+    print("Opção inválida.")
+```
+
+- Exibe uma mensagem caso o usuário escolha uma opção que não está no menu.
 
