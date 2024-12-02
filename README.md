@@ -31,7 +31,7 @@ Criar um programa em Python que permita:
     - Listar todos os contatos.
     - Remover um contato específico.
     - Encerra o programa.
-    
+
  4. O programa usa um loop while para manter o menu ativo até o usuário optar por sair.
 
  # Explicação do Código
@@ -66,3 +66,27 @@ def exibir menu()
 - Exibe as opções disponíveis para o usuário.
 
 4. Entrada do Usuário
+
+```bash
+    opcao = input("Escolha uma opção: ")
+```
+
+- Solicita que o usuário escolha uma opção digitando um número.
+
+5. Adicionar Contato
+
+```bash
+    if opcao == "1":
+    nome = input("Digite o nome: ")
+    telefone = input("Digite o telefone: ")
+    contatos[nome] = telefone
+    print(f"Contato de {nome} adicionado.")
+```
+ - Solicita o nome e o telefone.
+- Adiciona o contato ao dicionário com **contatos[nome] = telefone**.
+- Exemplo: Se o usuário digitar **nome = João** e **telefone = 1234**, o dicionário será atualizado para:
+
+```bash
+    {'João': '1234'}
+```
+
